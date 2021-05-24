@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DebtContr</string>
+    <string name="btn_add_agent">Добавить агента</string>
+
+    <string name="et_agent_name">Имя агента</string>
+    <string name="et_agent_number">Номер агента</string>
+    <string name="et_agent_money">Сумма агента</string>
+    <string name="et_agent_date">Оплачено до</string>
+
+</resources>
