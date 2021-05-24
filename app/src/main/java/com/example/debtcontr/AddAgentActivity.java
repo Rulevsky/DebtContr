@@ -26,8 +26,6 @@ public class AddAgentActivity extends AppCompatActivity {
     Button btnCheck;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +40,8 @@ public class AddAgentActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(onClickListener);
         btnCheck.setOnClickListener(onClickListener);
 
-        //dbHelper = new DBHelper(this);
+
+
 
     }
 
@@ -61,11 +60,12 @@ public class AddAgentActivity extends AppCompatActivity {
 
             switch (v.getId()) {
                 case R.id.btnAdd:
+
                     Log.d("tag", "Кнопка сработала");
                     AgentPresenter agentPresenter = new AgentPresenter(name, number, money, date);
                     Log.d("tag", "Экземпляр создан");
                     agentPresenter.TestSendDataToModel();
-                    Log.d("tag", "Прошел проверку");
+
 
 
                     break;
