@@ -39,7 +39,7 @@ public class AgentModel {
 
         ContentValues cv = new ContentValues();
         Log.d("tag", "CV создан");
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        SQLiteDatabase db = dbHelper.getWritableDatabase(); // пустой контекст, NullExc....
 
         Log.d("tag", "--- Insert in mytable: ---");
         // подготовим данные для вставки в виде пар: наименование столбца - значение
