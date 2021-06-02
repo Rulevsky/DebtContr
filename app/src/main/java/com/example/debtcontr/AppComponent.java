@@ -11,7 +11,7 @@ import dagger.Component;
 public interface AppComponent {
 
     //void inject(AddAgentActivity addAgentActivity);
-    void injectAgen(AgentModel agentModel);
+    void injectAgent(AgentModel agentModel);
     void injectAdd(AddAgentActivity addAgentActivity);
     //Context inject(AgentModel agentModel);
 }

@@ -47,23 +47,22 @@ public class AgentModel {
     void AddToDb() {
         AppComponent appComponent = new AppComponent() {
             @Override
-            public void injectAgen(AgentModel agentModel) {
+            public void injectAgent(AgentModel agentModel) {
                 context1 = context.getApplicationContext();
             }
 
             @Override
             public void injectAdd(AddAgentActivity addAgentActivity) {
-                addAgentActivity.
 
             }
-
-
         };
         DBHelper dbHelper = new DBHelper(context);
         ContentValues cv = new ContentValues();
         Log.d("tag", "CV создан");
 
-        SQLiteDatabase db = dbHelper.getWritableDatabase(); // пустой контекст, NullExc....
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        // cause java.lang.NullPointerException: Attempt to invoke virtual method 'java.io.File android.content.Context.getDatabasePath(java.lang.String)' on a null object reference
+        // Attempt to invoke virtual method 'java.io.File android.content.Context.getDatabasePath(java.lang.String)' on a null object reference
 
         Log.d("tag", "--- Insert in mytable: ---");
         // подготовим данные для вставки в виде пар: наименование столбца - значение
