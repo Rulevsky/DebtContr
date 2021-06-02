@@ -44,7 +44,7 @@ public class AgentPresenter {
         Log.d("tag", "Презентер получил");
         AgentModel agentModel = new AgentModel(name, number, money, date);
         Log.d("tag", "Попытка отправить в модел");
-        agentModel.AgentModTest();
+        agentModel.AddToDb();
 
 
 

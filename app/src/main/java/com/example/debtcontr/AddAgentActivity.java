@@ -13,6 +13,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import javax.inject.Inject;
+
+import dagger.Module;
 
 
 
@@ -24,6 +27,11 @@ public class AddAgentActivity extends AppCompatActivity {
 
     Button btnAdd;
     Button btnCheck;
+
+//    @Inject
+//    AppComponent appComponent;
+//    Context context;
+
 
 
     @Override
@@ -39,12 +47,25 @@ public class AddAgentActivity extends AppCompatActivity {
         btnCheck = findViewById(R.id.btnCheck);
         btnAdd.setOnClickListener(onClickListener);
         btnCheck.setOnClickListener(onClickListener);
-
+//        context = getApplicationContext();
+//        AppComponent appComponent = new AppComponent() {
+//            @Override
+//            public void inject(AddAgentActivity addAgentActivity) {
+//                context = getApplicationContext();
+//            }
+//        };
+//        DBHelper dbHelper = new DBHelper(context);
+        Log.d("tag", "oncreate done");
 
 
 
     }
 
+    protected AppComponent buildComponent() {
+        return DaggerAppComponent.builder()
+                .appModule(new AppModule(this))
+                .build();
+    }
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
         @Override

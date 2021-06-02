@@ -5,6 +5,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import javax.inject.Inject;
+
 public class DBHelper extends SQLiteOpenHelper {
     public static final String ID = "_id";
     public static final String NAME = "name";
@@ -15,10 +17,13 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String DBNAME = "mvpsample";
     public static final int VERSION = 1;
 
-
-    public DBHelper(Context context) {
+    
+    public DBHelper (Context context) {
         super(context, DBNAME, null, VERSION);
+
     }
+
+
 
     @Override
     public void onCreate(SQLiteDatabase db) {
